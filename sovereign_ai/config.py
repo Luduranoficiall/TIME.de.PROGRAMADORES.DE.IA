@@ -1,0 +1,7 @@
+import os
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ROOT_KEY = os.getenv("ROOT_KEY", "GOD_MODE_KEY")
+
+MAX_ITERATIONS = 5
+MIN_SCORE = 9
