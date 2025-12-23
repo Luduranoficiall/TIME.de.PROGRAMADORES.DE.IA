@@ -1,3 +1,4 @@
+
 from llm import llm
 
 class Agent:
@@ -12,3 +13,10 @@ ARCHITECT = Agent("Architect", "Senior Software Architect")
 BACKEND = Agent("Backend", "Senior Backend Engineer")
 REVIEWER = Agent("Reviewer", "Code Auditor")
 SECURITY = Agent("Security", "Security Specialist")
+
+AGENTS = {
+    "Architect": ARCHITECT,
+    "Backend": BACKEND,
+    "Reviewer": REVIEWER,
+    "Security": SECURITY,
+}

@@ -1,13 +1,21 @@
+
+
 import os
 import psycopg2
 import redis
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-POSTGRES_URL = os.getenv("POSTGRES_URL", "postgresql://user:pass@localhost:5432/sovereign")
+
+
+POSTGRES_URL = os.getenv("POSTGRES_URL", "postgresql://sovereign:sovereign@localhost:5432/sovereign")
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
-
-# PostgreSQL Connection
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://sovereign:sovereign@localhost:5432/sovereign")
 pg_conn = psycopg2.connect(POSTGRES_URL)
 pg_conn.autocommit = True
+engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+Base = declarative_base()
 
 # Redis Connection
 redis_client = redis.Redis.from_url(REDIS_URL)

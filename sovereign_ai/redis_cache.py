@@ -1,8 +1,9 @@
+
 import redis
 import os
 import time
 
-REDIS_URL = os.getenv("REDIS_URL")
+REDIS_URL = os.getenv("REDIS_URL") or "redis://localhost:6379/0"
 r = redis.Redis.from_url(REDIS_URL)
 
 def rate_limit(tenant_id: str, limit: int, window: int) -> bool:
