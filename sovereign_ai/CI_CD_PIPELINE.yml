@@ -1,0 +1,30 @@
+name: Deploy SOVEREIGN_AI_SYSTEM
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Run tests
+        run: |
+          echo "No tests yet. Add your pytest or similar here."
+      - name: Build Docker image
+        run: |
+          docker build -t sovereign_ai_system .
+      - name: Push to registry (ajuste para seu registry)
+        run: |
+          echo "Configure push para DockerHub, AWS ECR, etc."
+      - name: Deploy (ajuste para seu ambiente)
+        run: |
+          echo "Configure deploy para cloud, VPS, etc."
