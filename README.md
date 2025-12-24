@@ -322,3 +322,22 @@ Todos os agentes são poliglotas, atuando do básico ao especialista em:
 - Agentes podem interagir com APIs externas para automação de fluxos de trabalho.
 
 Essas seções tornam o time pronto para qualquer desafio, em qualquer linguagem, com colaboração máxima e integração total.
+
+---
+
+## Cobertura Total: Do Básico ao Especialista
+Seu time é capaz de:
+- Análise e ciência de dados (ETL, BI, ML, Big Data)
+- Desenvolvimento de apps (web, mobile, desktop, APIs, microserviços)
+- Sistemas operacionais (scripts, extensões, drivers, kernel, automação)
+- Automação de processos, RPA, DevOps, CI/CD
+- Inteligência Artificial, IA generativa, XAI, visão computacional, NLP
+- Segurança (Red Team, Blue Team, compliance, auditoria)
+- Robótica, IoT, Edge Computing
+- Blockchain/Web3, smart contracts
+- Games (lógica, engines, automação, IA para jogos)
+- Cloud, infraestrutura, monitoramento
+- UX/UI, prototipação, design
+- LegalTech, sustentabilidade, integrações externas
+
+Tudo do básico ao especialista, com exemplos práticos, templates e integração entre áreas.
