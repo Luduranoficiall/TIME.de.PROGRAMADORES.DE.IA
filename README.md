@@ -36,7 +36,7 @@ Plataforma IA-First para orquestração de times de programadores de IA, multi-t
           |
           v
 +-------------------+
-|    Orchestrator   | <--- Pipeline de agentes (Architect, Backend, Reviewer, Security)
+|    Orchestrator   | <--- Pipeline de agentes (Architect, Backend, Cloud, FullStack, Graphics, PowerBI, Reviewer, Security)
 +-------------------+
           |
           v
@@ -52,6 +52,7 @@ Plataforma IA-First para orquestração de times de programadores de IA, multi-t
 ```
 - Modular, escalável, clean architecture
 - Agentes especializados e pipeline customizável
+- Novos agentes: Cloud Engineer, Full Stack, Graphics, Power BI
 - Memória vetorial, embeddings, RAG
 - Integração LLM (OpenAI, etc)
 
@@ -96,10 +97,14 @@ Body: { "intent": "Automatize deploy CI/CD", "root_key": "SUA_ROOT_KEY" }
 ### Exemplo de resposta
 ```json
 {
-  "final_output": "Código backend seguro criado.",
+  "final_output": "Código backend seguro criado, deploy em nuvem automatizado, gráficos e dashboards gerados.",
   "trace": [
     { "agent": "Architect", "output": "Design..." },
     { "agent": "Backend Engineer", "output": "Implement..." },
+    { "agent": "Cloud Engineer", "output": "Provisionou infraestrutura e deploy em nuvem." },
+    { "agent": "Full Stack", "output": "Implementou frontend e integração completa." },
+    { "agent": "Graphics", "output": "Gerou gráficos e visualizações customizadas." },
+    { "agent": "Power BI", "output": "Automatizou dashboards e relatórios BI." },
     { "agent": "Reviewer", "output": "Review..." },
     { "agent": "Security Auditor", "output": "Audit..." }
   ]
@@ -176,6 +181,72 @@ Resposta final (trace + output)
 
 ---
 
+
+
+## Novos Agentes Avançados
+
+### Cloud Engineer
+Automatiza infraestrutura, DevOps e deploy em nuvem (AWS, Azure, GCP).
+
+### Full Stack
+Desenvolvimento completo: backend, frontend, integração e APIs.
+
+### Graphics
+Visualização de dados, gráficos interativos e computação gráfica.
+
+### Power BI
+Automação de dashboards, relatórios e análises Power BI.
+
+### Generative AI
+Geração automática de texto, código, imagens, áudio e outros conteúdos criativos.
+
+### Testes
+Automação de testes unitários, integração, E2E e validação de qualidade.
+
+### DevOps
+Automação de pipelines CI/CD, deploy, monitoramento e infraestrutura como código.
+
+### Data Science
+Análise de dados, modelagem, machine learning e visualização avançada.
+
+
+### UX/UI
+Design de interfaces, prototipação, experiência do usuário e testes de usabilidade.
+
+### XAI (Inteligência Artificial Explicável)
+Explicação de decisões de modelos, geração de relatórios interpretáveis, auditoria de IA.
+
+### Red Team (Segurança Ofensiva)
+Testes de penetração, simulação de ataques, análise de vulnerabilidades.
+
+### Blockchain/Web3
+Desenvolvimento e auditoria de smart contracts, integração Web3, análise de transações.
+
+### IoT/Edge Computing
+Automação, monitoramento e integração de dispositivos IoT e edge.
+
+### Robótica
+Automação robótica, controle de hardware, simulação e visão computacional.
+
+### RPA (Automação de Processos)
+Automação de tarefas repetitivas, integração de sistemas, bots de processos.
+
+### Voice/Chatbots
+Desenvolvimento de assistentes virtuais, bots de voz, integração com plataformas conversacionais.
+
+### Analytics Avançado
+Análise preditiva, dashboards avançados, insights automatizados.
+
+### Green IT/Sustentabilidade
+Monitoramento de consumo, otimização energética, relatórios de sustentabilidade.
+
+### LegalTech/Compliance
+Automação de compliance, análise de contratos, relatórios jurídicos automatizados.
+
+Veja exemplos de integração em [integracoes_exemplos/novos_templates.md](integracoes_exemplos/novos_templates.md), [integracoes_exemplos/novos_templates_avancados.md](integracoes_exemplos/novos_templates_avancados.md) e [integracoes_exemplos/novos_templates_ultra.md](integracoes_exemplos/novos_templates_ultra.md).
+
+---
+
 ## Como Criar Novos Agentes e Pipelines
 1. Crie uma nova classe herdando de `BaseAgent`.
 2. Implemente o método `run()` ou métodos customizados.
@@ -186,10 +257,10 @@ Exemplo:
 ```python
 from app.agents.base import BaseAgent
 class DataScienceAgent(BaseAgent):
-    name = "Data Scientist"
-    role = "ML Specialist"
-    def analyze(self, data: str) -> str:
-        return self.run(f"Analyze dataset: {data}")
+  name = "Data Scientist"
+  role = "ML Specialist"
+  def analyze(self, data: str) -> str:
+    return self.run(f"Analyze dataset: {data}")
 ```
 
 ---
@@ -229,4 +300,25 @@ class DataScienceAgent(BaseAgent):
 
 ---
 
-Essas seções avançadas complementam a documentação, tornando o projeto pronto para escala, automação e segurança de nível enterprise. Se quiser mais exemplos, fluxos ou integrações, só avisar!
+
+---
+
+## Poliglotismo: Todas as Linguagens
+Todos os agentes são poliglotas, atuando do básico ao especialista em:
+- Python, JavaScript, TypeScript, Java, C#, Go, Rust, C/C++, Ruby, PHP, Kotlin, Swift, R, Julia, Scala, Shell, SQL, Lua, e mais.
+- Suporte a frameworks modernos (React, Angular, Vue, Django, FastAPI, Spring, .NET, Node.js, Flask, etc).
+- Capacidade de gerar, revisar, migrar e integrar código entre múltiplas linguagens.
+
+## Fluxos Colaborativos Entre Agentes
+- Exemplo: Backend em Python, Frontend em React, integração via API, testes em Go, automação DevOps em Shell, dashboards em Power BI, explicações XAI em R, smart contracts em Solidity.
+- Agentes colaboram para entregar soluções multi-stack e multi-linguagem.
+
+## Onboarding Automatizado Poliglota
+- Scripts e templates para onboarding de novos devs em qualquer stack.
+- Geração automática de ambientes, exemplos e documentação para cada linguagem.
+
+## Integração com Plataformas Externas
+- Slack, Jira, Notion, GitHub Actions, CI/CD, monitoramento, automação de tickets e notificações.
+- Agentes podem interagir com APIs externas para automação de fluxos de trabalho.
+
+Essas seções tornam o time pronto para qualquer desafio, em qualquer linguagem, com colaboração máxima e integração total.

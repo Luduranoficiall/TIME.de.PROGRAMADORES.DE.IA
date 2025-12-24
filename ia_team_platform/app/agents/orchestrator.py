@@ -1,13 +1,52 @@
+
 from app.agents.architect import ArchitectAgent
 from app.agents.backend import BackendAgent
 from app.agents.reviewer import ReviewerAgent
 from app.agents.security import SecurityAgent
+from app.agents.cloud_engineer import CloudEngineerAgent
+from app.agents.fullstack import FullStackAgent
+from app.agents.graphics import GraphicsAgent
+from app.agents.powerbi import PowerBIAgent
+from app.agents.generative_ai import GenerativeAIAgent
+from app.agents.tests import TestsAgent
+from app.agents.devops import DevOpsAgent
+from app.agents.datascience import DataScienceAgent
+from app.agents.uxui import UXUIAgent
+from app.agents.xai import XAIAgent
+from app.agents.redteam import RedTeamAgent
+from app.agents.blockchain import BlockchainAgent
+from app.agents.iot import IoTAgent
+from app.agents.robotics import RoboticsAgent
+from app.agents.rpa import RPAAgent
+from app.agents.voice import VoiceAgent
+from app.agents.analytics import AnalyticsAgent
+from app.agents.greenit import GreenITAgent
+from app.agents.legaltech import LegalTechAgent
 
 class Orchestrator:
     def __init__(self):
         self.pipeline = [
             ArchitectAgent(),
             BackendAgent(),
+            CloudEngineerAgent(),
+            FullStackAgent(),
+            GraphicsAgent(),
+            PowerBIAgent(),
+            GenerativeAIAgent(),
+            DataScienceAgent(),
+            DevOpsAgent(),
+            TestsAgent(),
+            UXUIAgent(),
+            XAIAgent(),
+            RedTeamAgent(),
+            BlockchainAgent(),
+            IoTAgent(),
+            RoboticsAgent(),
+            RPAAgent(),
+            VoiceAgent(),
+            AnalyticsAgent(),
+            GreenITAgent(),
+            LegalTechAgent(),
             ReviewerAgent(),
             SecurityAgent(),
         ]
