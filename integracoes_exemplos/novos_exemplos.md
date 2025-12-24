@@ -66,4 +66,22 @@ df = pd.DataFrame({
     'Idade': [28, 34]
 })
 df.to_excel('dados.xlsx', index=False)
+---
+
+# Exemplo de Integração com OpenAI (Python)
+
+```python
+import openai
+
+openai.api_key = "SUA_OPENAI_API_KEY"
+
+response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[
+        {"role": "system", "content": "Você é um assistente útil."},
+        {"role": "user", "content": "Olá, OpenAI!"}
+    ]
+)
+print(response['choices'][0]['message']['content'])
+```
 ```
