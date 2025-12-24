@@ -1,4 +1,7 @@
+
 # TIME.de.PROGRAMADORES.DE.IA
+
+Desenvolvedor: [www.luduranoficiall.com](https://www.luduranoficiall.com)
 
 [![Build Status](https://img.shields.io/github/workflow/status/Luduranoficiall/TIME.de.PROGRAMADORES.DE.IA/CI)](https://github.com/Luduranoficiall/TIME.de.PROGRAMADORES.DE.IA/actions)
 [![License](https://img.shields.io/github/license/Luduranoficiall/TIME.de.PROGRAMADORES.DE.IA)](LICENSE)
@@ -322,6 +325,11 @@ Todos os agentes são poliglotas, atuando do básico ao especialista em:
 - Agentes podem interagir com APIs externas para automação de fluxos de trabalho.
 
 Essas seções tornam o time pronto para qualquer desafio, em qualquer linguagem, com colaboração máxima e integração total.
+
+---
+
+## Documentação de Funções e Exemplos
+Veja [DOCUMENTACAO_FUNCOES_EXEMPLOS.md](DOCUMENTACAO_FUNCOES_EXEMPLOS.md) para exemplos práticos, fluxos e funções do time em cada área (dados, apps, sistemas, automação, IA, segurança, robótica, IoT, blockchain, games, cloud, BI, compliance, etc).
 
 ---
 
